@@ -1,0 +1,23 @@
+{
+  "name": "NSE Auto Notification",
+  "version": "1.0",
+  "description": "Get Corporate Announcement. Developed By: Abhishek P",
+  "permissions": ["activeTab", "declarativeContent", "storage", "notifications"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [{
+    "run_at": "document_end",
+    "matches": ["*://*.nseindia.com/*"],
+    "js": ["contentscript.js"]
+}],
+  "icons": {
+    "16": "get_started16.png",
+    "32": "get_started32.png",
+    "48": "get_started48.png",
+    "128": "get_started128.png"
+  },
+  "manifest_version": 2
+
+}
